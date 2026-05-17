@@ -53,7 +53,7 @@ Both read files were run through Falco simultaneously with default settings.
 
 #### Read 1 QC
 
-![Falco QC Read 1](WGBS/wgbs%20results/falco_qc_read1.png)
+![Falco QC Read 1](WGBS/outputs/falco_qc_read1.png)
 
 #### Read 2 QC
 
