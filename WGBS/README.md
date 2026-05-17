@@ -53,11 +53,11 @@ Both read files were run through Falco simultaneously with default settings.
 
 #### Read 1 QC
 
-![Falco QC Read 1](WGBS/outputs/falco_qc_read1.png)
+![Falco QC Read 1](outputs/falco_qc_read1.png)
 
 #### Read 2 QC
 
-![Falco QC Read 2](WGBS/outputs/falco_qc_read2.png)
+![Falco QC Read 2](outputs/falco_qc_read2.png)
 
 **Interpretation:**  
 Both reads are flagged as "fail" for per-base sequence content,this is **expected** for bisulfite-treated data, not a quality problem. In Read 1, T dominates (~50%) with C nearly absent (~0–1%) across all 150 positions. This is the classic bisulfite conversion signature: every unmethylated cytosine is converted to uracil during bisulfite treatment and subsequently read as T, so depleted C confirms the conversion worked correctly. Read 2 shows A dominant (~47–48%), which is consistent with the complementary strand of bisulfite-converted DNA.
