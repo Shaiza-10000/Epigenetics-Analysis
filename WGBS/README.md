@@ -1,4 +1,4 @@
-# Module 1 — WGBS: Bisulfite Sequencing Pipeline
+# WGBS: Bisulfite Sequencing Pipeline
 
 **Platform:** Galaxy Europe (usegalaxy.eu)  
 **Reference:** Lin et al. (2015), PLOS ONE - Breast Cancer Methylomes  
