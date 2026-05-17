@@ -80,7 +80,7 @@ A standard short-read aligner cannot be used directly on bisulfite data because 
 
 The bias plot checks whether CpG methylation levels are consistent across all positions along a read. A drop or spike at the 5′ or 3′ ends would indicate end-repair artifacts or incomplete bisulfite conversion, which would require positional trimming before extraction.
 
-![Methylation bias - top strand](methylation_bias_top_strand.png)
+![Methylation bias - top strand](outputs/methylation_bias_top_strand.png)
 
 **Interpretation:**  
 The original top strand shows stable CpG methylation between 70–75% across all 150 read positions for both read pairs (#1 salmon, #2 teal). The MethylDackel-suggested trim parameters `--OT 0,145,6,149` indicate only a minimal 5-position trim at the very end of read 2, reflecting negligible bias. No meaningful positional artifacts were detected, so no trimming was applied for extraction.
@@ -97,7 +97,7 @@ Methylation fractions were extracted in CpG-only mode with per-cytosine merging 
 
 The extracted bedGraph was converted to bigWig (Wig/BedGraph-to-bigWig 1.9.1) after setting the genome build attribute to hg38. The CpG islands BED file was imported from Zenodo. `computeMatrix` was run in reference-point mode (±1 kb around TSS) followed by `plotProfile`.
 
-![Methylation profile - subset sample](methylation_profile_cpg_subset.png)
+![Methylation profile - subset sample](outputs/methylation_profile_cpg_subset.png)
 
 **Interpretation:**  
 The single-sample profile shows the characteristic TSS-centered hypomethylation dip: methylation falls from ~0.6–0.65 at flanking regions to ~0.30–0.35 at the TSS, then partially recovers in the gene body. This reflects the well-established pattern of promoter hypomethylation at actively transcribed genes. The noisiness of the curve is expected given the small subset size used.
@@ -108,7 +108,7 @@ The single-sample profile shows the characteristic TSS-centered hypomethylation 
 
 The six precomputed UCSC-format bedGraph files were assembled into a Galaxy collection, converted to bigWig, and run through the same `computeMatrix`/`plotProfile` pipeline.
 
-![Methylation profile — all samples](methylation_level_all_samples.png)
+![Methylation profile — all samples](outputs/methylation_level_all_samples.png)
 
 **Interpretation:**  
 All six samples show the expected TSS-centred hypomethylation pattern. However, there is a clear tissue-type stratification:
@@ -131,7 +131,7 @@ Ensembl-format bedGraphs (without the `ucsc` suffix) were used because Metilene 
 
 #### Normal vs Cancer Mean Methylation per DMR
 
-![DMR group comparison](metilene_dmr_group_comparison.png)
+![DMR group comparison](outputs/metilene_dmr_group_comparison.png)
 
 **Interpretation:**  
 Each point represents one DMR; the x-axis is mean methylation in the normal group (NB1 + NB2) and the y-axis is mean methylation in BT198 (cancer). The two main clusters visible are:
